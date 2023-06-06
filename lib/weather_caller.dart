@@ -89,10 +89,10 @@ class WeatherDisplay extends StatelessWidget {
   final bool isPermissionGranted;
 
   const WeatherDisplay({
-    Key? key,
+    super.key,
     required this.weatherData,
     required this.isPermissionGranted,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {

@@ -6,7 +6,7 @@ void main() {
 }
 
 class WeatherApp extends StatelessWidget {
-  const WeatherApp({Key? key});
+  const WeatherApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class WeatherApp extends StatelessWidget {
 }
 
 class WeatherScreen extends StatefulWidget {
-  const WeatherScreen({Key? key});
+  const WeatherScreen({super.key});
 
   @override
   _WeatherScreenState createState() => _WeatherScreenState();
