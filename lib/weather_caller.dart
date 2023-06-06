@@ -42,7 +42,7 @@ class WeatherCaller {
       final weatherData = WeatherData.fromJson(jsonDecode(response.body));
       return weatherData;
     } else {
-      throw Exception('Location permission not granted');
+      throw Exception('Location permission not granted.');
     }
   }
 }
@@ -102,7 +102,7 @@ class WeatherDisplay extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: const [
             Text(
-              'No permissions',
+              'Enable location access to view data.',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.w200),
               textAlign: TextAlign.center,
             ),
@@ -111,6 +111,11 @@ class WeatherDisplay extends StatelessWidget {
 
     return Column(
       children: [
+        const Text(
+          'Weather in your area',
+          style: TextStyle(fontSize: 18, fontWeight: FontWeight.w200),
+        ),
+        const SizedBox(height: 15),
         Image.network(
           'https://openweathermap.org/img/w/${weatherData.iconCode}.png',
         ),
